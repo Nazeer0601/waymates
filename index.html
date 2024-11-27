@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAYMATES!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>WAYMATES!</h1>
+        <p>Find travel partners, share a ride, and save on travel costs !</p>
+        <button onclick="window.location.href='#signup'">Sign Up</button>
+        <button onclick="window.location.href='#login'">Login</button>
+    </header>
+
+    <!-- Image Banner -->
+    <section class="banner">
+        <img src="ride.jpg" alt="Travel together" />
+    </section>
+
+    <!-- Search Section -->
+    <section id="search">
+        <h2>Find a Ride</h2>
+        <form onsubmit="searchRide(event)">
+            <label for="origin">Origin:</label>
+            <input type="text" id="origin" placeholder="Enter starting point" required>
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="Enter destination" required>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Search Rides</button>
+        </form>
+        <div id="searchResult"></div>
+    </section>
+
+    <!-- Post a Ride Section -->
+    <section id="post-ride">
+        <h2>Post a Ride</h2>
+        <form onsubmit="postRide(event)">
+            <label for="post-origin">Origin:</label>
+            <input type="text" id="post-origin" placeholder="Starting point" required>
+
+            <label for="post-destination">Destination:</label>
+            <input type="text" id="post-destination" placeholder="Destination" required>
+
+            <label for="post-date">Travel Date:</label>
+            <input type="date" id="post-date" required>
+
+            <label for="post-time">Travel Time:</label>
+            <input type="time" id="post-time" required>
+
+            <label for="seats">Available Seats:</label>
+            <input type="number" id="seats" placeholder="Number of seats available" required>
+
+            <label for="mobile">Your Mobile Number:</label>
+            <input type="text" id="mobile" placeholder="Enter your mobile number" required>
+
+            <button type="submit">Post Ride</button>
+        </form>
+        <div id="postResult"></div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <div class="faq-item">
+            <h3>What is WAYMATES?</h3>
+            <p>WAYMATES is a platform to connect travelers . You can find ride shares, post your ride offers, and save on travel costs.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I post a ride?</h3>
+            <p>To post a ride, simply click on the 'Post a Ride' section, fill in your details including your origin, destination, date, time, and available seats, and submit.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I search for rides?</h3>
+            <p>To search for a ride, go to the 'Find a Ride' section, enter your origin, destination, and travel date, and click 'Search Rides'.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I contact the person offering the ride?</h3>
+            <p>You can contact the ride offerer using the mobile number listed in the ride details.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is it safe to share a ride with strangers?</h3>
+            <p>Safety is a priority for us. We recommend checking the ride details, reading the ratings of the drivers (if available), and communicating with the ride offerer before making a decision.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Festival Travel Partner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
